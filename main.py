@@ -1,5 +1,11 @@
+# character_creation_module/main.py
+
 from random import randint
 
+# Новый импорт.
+# Из модуля start_game_banner, который расположен в папке graphic_arts,
+# импортируем функцию run_screensaver().
+from graphic_arts.start_game_banner import run_screensaver
 
 def attack(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
@@ -70,7 +76,7 @@ def start_training(char_name: str, char_class: str) -> str:
     return 'Тренировка окончена.'
 
 
-def choice_char_class():
+def choice_char_class() -> str:
     approve_choice = None
     char_class = None
     while approve_choice != 'y':
@@ -93,7 +99,8 @@ def choice_char_class():
     return char_class
 
 
-def main():
+def main() -> None:
+    run_screensaver()
     print('Приветствую тебя, искатель приключений!')
     print('Прежде чем начать игру...')
     char_name: str = input('...назови себя: ')
