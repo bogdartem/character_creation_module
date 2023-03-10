@@ -9,6 +9,7 @@ from graphic_arts.start_game_banner import run_screensaver
 
 
 def attack(char_name: str, char_class: str) -> str:
+    """Attack function."""
     if char_class == 'warrior':
         damage: int = 5 + randint(3, 5)
         return (f'{char_name} нанёс урон противнику '
@@ -25,6 +26,7 @@ def attack(char_name: str, char_class: str) -> str:
 
 
 def defence(char_name: str, char_class: str) -> str:
+    """Defence function."""
     if char_class == 'warrior':
         blocked: int = 10 + randint(5, 10)
         return (f'{char_name} блокировал {blocked} урона')
@@ -38,6 +40,7 @@ def defence(char_name: str, char_class: str) -> str:
 
 
 def special(char_name: str, char_class: str) -> str:
+    """Special function."""
     if char_class == 'warrior':
         special_skill_value: int = 80 + 25
         return (f'{char_name} применил специальное умение'
@@ -54,6 +57,7 @@ def special(char_name: str, char_class: str) -> str:
 
 
 def start_training(char_name: str, char_class: str) -> str:
+    """Start_training function."""
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель — отличный боец ближнего боя.')
     if char_class == 'mage':
@@ -78,6 +82,7 @@ def start_training(char_name: str, char_class: str) -> str:
 
 
 def choice_char_class() -> str:
+    """Choice your char."""
     approve_choice = None
     char_class = None
     while approve_choice != 'y':
